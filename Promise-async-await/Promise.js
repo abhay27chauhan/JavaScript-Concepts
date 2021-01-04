@@ -25,7 +25,7 @@ myPromise
 
 // 1. get request
 
-fetch('https://jsonplaceholder.typicode.com/users')
+fetch('https://jsonplaceholder.typicode.com/users')  // returns promise
     .then(response => response.json())
     .then(users => {
         const firstUser = users[0];
