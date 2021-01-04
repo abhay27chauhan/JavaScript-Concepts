@@ -14,7 +14,16 @@ myPromise
     .then(rejectValue => console.log(rejectValue));
 
 
-// example
+// example (run the code in chrome console)
+
+/* 
+    let promise = fetch(url, [options])
+
+    1. url – the URL to access.
+    2. options – optional parameters: method, headers etc.
+*/
+
+// 1. get request
 
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
@@ -26,3 +35,21 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(posts => console.log(posts))
     .catch(error => console.log(error));
+
+// 2. post request using fetch route;
+
+let user = {
+  name: 'John',
+  surname: 'Smith'
+};
+
+fetch('https://jsonplaceholder.typicode.com/users', {
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: JSON.stringify(user)
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(err => console.log(err));
