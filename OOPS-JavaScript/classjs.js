@@ -39,6 +39,7 @@ class SubAdmin extends User{
 
 module.exports = User;
 
+// making object of subadmin class
 
 const rock = new SubAdmin("rock", "rock123@gmail.com");
 rock.enrollCourses("Python");
