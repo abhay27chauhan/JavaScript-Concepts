@@ -11,11 +11,12 @@ console.log("Hello World :)");
 // dynamically typed  -> Javascript
 // let -> a is variable that initially contains undefined
 // Primitive types: number ,string ,boolean, undefined,null
+// non-primitive types: function, array, objects
 // using ; is not mandatory in js
 
 let a; // initally a = undefinded | scope - script
 var b; // initially b = undefined | scope - global
-const c = 10; // need to intialize at the time of declaration | scope - script
+const c = 10; // need to initialize at the time of declaration | scope - script
 
 // const and let are block scoped
 // var is function scoped
